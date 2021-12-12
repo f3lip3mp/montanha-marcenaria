@@ -123,6 +123,12 @@
   font-size: 20px;
 }
 
+/******************
+*******************
+***BLOCO GALERIA***
+*******************
+*******************/
+
 .catalogo{
   display: flex;
   flex-direction: column;
@@ -190,16 +196,22 @@ hr{
   visibility: visible;
 }
 
-.conteiner_foto img:hover{
+.conteiner_foto:hover img{
   opacity: 0.3;
 }
 
+/*FIM BLOCO GALERIA*/
+
+/******************
+*******************
+****BLOCO SOBRE****
+*******************
+*******************/
 .sobre{
   display: flex;
   margin: auto;
-  width: 88%;
+  width: 90%;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -207,6 +219,7 @@ hr{
   width: 16%;
   min-width: 300px;
   max-width: 400px;
+
 }
 
 #img_sobre img{
@@ -214,15 +227,198 @@ hr{
 }
 
 #descricao{
-  display: flex;
-  width: 70%;
-  max-height: 10%;
   padding: 30px;
 }
 
 #descricao p{
-  
+  text-align:justify;
   font-size: 1.35em;
-  word-spacing: 2.5px;
+  word-spacing: 1.5px;
   letter-spacing: 0.75px;
+}
+
+/*FIM DO BLOCO SOBRE*/
+
+/******************
+*******************
+****BLOCO CONTATO****
+*******************
+*******************/
+
+.container-contato{
+  width: 75%;
+  margin: auto;
+  background-color: #152427;
+  border-radius: 20px;
+  box-shadow:4px 6px 14px 0px rgb(0 0 0 / 63%);
+}
+
+.contato{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contato label{
+  display: flex;
+  justify-content: center;
+  font-size: 1.1em;
+  color: #FFF;
+}
+
+.contato form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 75%;
+}
+
+.contato button{
+  margin: auto;
+  width: 80px;
+}
+
+.contato input[placeholder], textarea[placeholder], select, button{
+  font-size: 0.9em;
+  padding: 7px;
+  margin: 12px;
+}
+
+.contato input, textarea, select, button{
+  border: none;
+  border-radius: 5px;
+}
+
+.contato2{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  gap: 25px;
+  border-left: #FFF solid 1px;
+  padding-bottom: 22px;
+}
+
+.numeros-contatos .nome-contato{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: underline;
+}
+
+.numeros-contatos{
+  margin: auto;
+}
+
+.contato2 span{
+  color: #FFF;
+  font-size: 1.3em;
+  padding: 10px
+}
+
+.contato2 h2{
+  color: #FFF;
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+
+.contato2 .fa-whatsapp{
+  margin: auto;
+  width: 6%;
+  color: #40E65E;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+/*FIM DO BLOCO CONTATO*/
+
+/*****************
+******************
+***BLOCO RODAPE***
+******************
+******************/
+.rodape-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  
+  width: 90%;
+  background-color: #152427;
+  margin-top: 120px;
+  margin: 120px auto 0px;
+  padding: 25px;
+}
+
+.horario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.horario .dias{
+  font-weight: bold;
+}
+
+.redes-sociais a{
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+.redes-sociais i, .formas-pagamento svg, .formas-pagamento i{
+  font-size: 28px;
+  padding: 10px;
+}
+
+.outras-infos{
+  text-align: center;
+}
+
+.outras-infos h2{
+  margin: 13px;
+}
+
+
+
+
+@media only screen and (max-width: 905px) {
+  .container-contato{
+    width: 500px;
+  }
+  .contato{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  .contato2{
+    margin-top: 80px;
+    border-left: none;
+    border-top: #FFF solid 1px;
+    width: 70%;
+  }
+  .contato2 h2{
+    padding-top: 35px;
+  }
+  /*FIM DIV CONTATO*/
+  .rodape-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mapa iframe{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .sobre{
+    flex-wrap: wrap;
+    min-width: 600px;
+  }
+  .rodape-container{
+    
+  }
 }
