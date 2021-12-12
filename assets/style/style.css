@@ -6,6 +6,7 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+
 .cabecalho img{
   width: 180px;
   margin: 30px;
@@ -18,9 +19,7 @@
 }
 
 .menu_nav ul li{
-  padding-left: 84px;
-  padding-right: 84px;
-  border-right: white solid 1px;
+  padding:18px 80px 18px 80px;
 }
 
 #op_contato{
@@ -32,34 +31,45 @@
   display: flex;
   list-style: none;
   justify-content: space-around;
-  padding-right: 15px;
-  padding-left: 15px;
+
 }
 .menu_nav a{
+  position: relative;
   text-decoration:none;
   color: #FFF;
   font-size: 1.5em;
 }
 
-.menu_nav a:hover{
+.menu_nav li:hover{
   background-color: rgb(70, 70, 70);
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 .menu_nav{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   background-color: #152427;
   border-radius: 10px;
-  width: 50%;
+  width: 100%;
   max-width: 1000px;
-  height: 50px;
   box-shadow: 5px 7px 18px 4px rgba(81,81,81,0.52);
 }
 
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
 .slider-container{
-  padding-top: 60px;
+  margin-top: 60px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -69,10 +79,10 @@
 
 .boxSlider{
   width: 70%;
-  min-width: 750px;
+  min-width: 330px;
   max-width: 1350px;
   height: 55%;
-  min-height: 550px;
+  min-height: 420px;
   position: relative;
   /* top: 31%;
   left: 50%;
@@ -132,17 +142,19 @@
 .catalogo{
   display: flex;
   flex-direction: column;
-  width: 93%;
+  align-items: center;
+  width: 90%;
+  min-width: 400px;
   margin: auto;
+  background-color: rgba(226, 226, 226, 0.308);
 }
 .catalogo h2{
-  display: flex;
   justify-content: center;
   padding: 26px;
 }
 
 .titulo_foto{
-  visibility: hidden;
+  display: none;
   position: absolute;
   text-align: center;
   color: #152427;
@@ -153,7 +165,7 @@
 }
 
 .descricao_foto{
-  visibility: hidden;
+  display: none;
   position: absolute;
   text-align: center;
   color: #333333;
@@ -165,7 +177,6 @@
 
 .conteiner_foto{
   margin: 10px;
-  /* padding: 10px; */
   position: relative;
 }
 
@@ -174,30 +185,32 @@ hr{
 }
 
 .img_produtos1{
-  width: 100%;
+  width: 90%;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgba(226, 226, 226, 0.308);
-  align-items: center;
 }
 
 .img_produtos1 img{
-  width: 550px;
-  height: 400px;
+  width: 450px;
+  height: 390px;
 }
 
 .conteiner_foto:hover .descricao_foto{
-  visibility: visible;
+  display: inline;
 }
 
 .conteiner_foto:hover .titulo_foto{
-  visibility: visible;
+  display: inline;
 }
 
 .conteiner_foto:hover img{
   opacity: 0.3;
+}
+
+#btnLeiaMais{
+  display: none;
 }
 
 /*FIM BLOCO GALERIA*/
@@ -345,8 +358,8 @@ hr{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  
-  width: 90%;
+  /* justify-content: center; */
+  width: 100%;
   background-color: #152427;
   margin-top: 120px;
   margin: 120px auto 0px;
@@ -357,6 +370,7 @@ hr{
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
 }
 .horario .dias{
   font-weight: bold;
@@ -365,12 +379,13 @@ hr{
 .redes-sociais a{
   margin-left: auto;
   margin-right: auto;
-  color: black;
+  color: #fff;
 }
 
 .redes-sociais i, .formas-pagamento svg, .formas-pagamento i{
   font-size: 28px;
   padding: 10px;
+  color: #FFF;
 }
 
 .outras-infos{
@@ -379,6 +394,7 @@ hr{
 
 .outras-infos h2{
   margin: 13px;
+  color: #FFF;
 }
 
 
@@ -411,6 +427,46 @@ hr{
   .mapa iframe{
     width: 100%;
   }
+
+  #btnLeiaMais{
+    display: flex;
+    position: absolute;
+    top: 85%;
+  }
+
+  .titulo_foto{
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: #152427;
+    font-size: 2.3em;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .descricao_foto{
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: #333333;
+    font-size: 1.3em;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .container_foto:hover .descricao_foto{
+    visibility: hidden;
+  }
+  
+  .conteiner_foto:hover .titulo_foto{
+    visibility: hidden;
+  }
+  
+  .conteiner_foto:hover img{
+    opacity: 100%;
+  }
 }
 
 @media only screen and (max-width: 800px){
@@ -419,6 +475,60 @@ hr{
     min-width: 600px;
   }
   .rodape-container{
-    
+
   }
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 75vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 999;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
 }

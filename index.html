@@ -14,17 +14,24 @@
 
 <body>
   <header class="cabecalho">
-    <a href="#"><img src="./assets/img/logo.jpg" alt="logotipo"></a>
-    <div class="menu_nav">
-      <nav>
-        <ul>
-          <a href=".contato"><li>Home</li></a>
-          <a href="/.catalogo"><li>Catálogo</li></a>
-          <a href=""><li>Sobre</li></a>
-          <a href=""><li id="op_contato">Contato</li></a>
+    
+    <img src="./assets/img/logo.jpg" alt="logotipo">
+    <div >
+      <nav class="menu_nav">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
     </div>
+    <script src="./assets/js/navbar.js"></script>
   </header>
   <aside class="slider-container">
     <div class="boxSlider">
@@ -48,6 +55,7 @@
             TAMANHO: 70cm x 30cm x 47cm
             PRAZO DE ENTREGA: 12-16 dias
             Gostou? Nos envie uma mensagem para saber mais.</p>
+            <button onclick="leiaMais()" id="btnLeiaMais">Ler mais...</button>
           <img src="/assets/img/foto3.jpeg" alt="">
         </article>
         <article class="conteiner_foto">
@@ -56,6 +64,7 @@
             TAMANHO: 70cm x 30cm x 47cm
             PRAZO DE ENTREGA: 12-16 dias
             Gostou? Nos envie uma mensagem para saber mais.</p>
+            <button onclick="leiaMais()" id="btnLeiaMais">Ler mais...</button>
           <img src="/assets/img/foto4.jpeg" alt="">
         </article>
         <div class="conteiner_foto">
@@ -66,6 +75,7 @@
             banco: 1,07m
             floreiras: 40cm cada
             PROFUNDIDADE: 40cm</span>
+            <button onclick="leiaMais()" id="btnLeiaMais">Ler mais...</button>
           <img src="/assets/img/foto5.jpeg" alt="">
         </div>
         <div class="conteiner_foto">
@@ -73,6 +83,7 @@
           <span class="descricao_foto">Tábua de corte, feita em Itaúba.
             Dimensão : 20 cm de largura X 30 cm de altura.
             Numerada e com a identificação da</span>
+            <button onclick="leiaMais()" id="btnLeiaMais">Ler mais...</button>
           <img src="/assets/img/foto6.jpeg" alt="">
         </div>
         <div class="conteiner_foto">
@@ -80,6 +91,7 @@
           <span class="descricao_foto">Tábua de corte, feita em Itaúba.
             Dimensão : 20 cm de largura X 30 cm de altura.
             Numerada e com a identificação da</span>
+            <button onclick="leiaMais()" id="btnLeiaMais">Ler mais...</button>
           <img src="/assets/img/foto7.jpeg" alt="">
         </div>
         <div class="conteiner_foto">
@@ -87,9 +99,11 @@
           <span class="descricao_foto">Tábua de corte, feita em Itaúba.
             Dimensão : 20 cm de largura X 30 cm de altura.
             Numerada e com a identificação da</span>
+            <button onclick="leiaMais()" id="btnLeiaMais">Ler mais...</button>
           <img src="/assets/img/foto2.jpeg" alt="">
         </div>
       </div>
+      <script src="./assets/js/leiaMais.js"></script>
     </section>
   <hr>
   <article class="sobre">
