@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5161b492e9.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   <link rel="stylesheet" href="/assets/style/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <title>Montanha Marcenaria</title>
@@ -16,8 +18,8 @@
     <div class="menu_nav">
       <nav>
         <ul>
-          <a href=""><li>Home</li></a>
-          <a href=""><li>Catálogo</li></a>
+          <a href=".contato"><li>Home</li></a>
+          <a href="/.catalogo"><li>Catálogo</li></a>
           <a href=""><li>Sobre</li></a>
           <a href=""><li id="op_contato">Contato</li></a>
         </ul>
@@ -36,25 +38,26 @@
   </aside>
   <br><br><br>
   <hr>
-    <div class="catalogo">
+    <!-- Alterar os elementos do container foto para ARTICLE, as tags SPAN devem ser alteradas para P -->
+    <section class="catalogo">
       <h2>CATÁLOGO</h2>
-      <figure class="img_produtos1">
-        <div class="conteiner_foto">
+      <div class="img_produtos1">
+        <article class="conteiner_foto">
           <h2 class="titulo_foto">Sapateira - Madeira Pinus</h2>
-          <span class="descricao_foto">(incluso uma figura no topo da sapateira) figura adicional R$5,00
+          <p class="descricao_foto">(incluso uma figura no topo da sapateira) figura adicional R$5,00
             TAMANHO: 70cm x 30cm x 47cm
             PRAZO DE ENTREGA: 12-16 dias
-            Gostou? Nos envie uma mensagem para saber mais.</span>
+            Gostou? Nos envie uma mensagem para saber mais.</p>
           <img src="/assets/img/foto3.jpeg" alt="">
-        </div>
-        <div class="conteiner_foto">
+        </article>
+        <article class="conteiner_foto">
           <h2 class="titulo_foto">Sapateira - Madeira Pinus</h2>
-          <span class="descricao_foto">(incluso uma figura no topo da sapateira) figura adicional R$5,00
+          <p class="descricao_foto">(incluso uma figura no topo da sapateira) figura adicional R$5,00
             TAMANHO: 70cm x 30cm x 47cm
             PRAZO DE ENTREGA: 12-16 dias
-            Gostou? Nos envie uma mensagem para saber mais.</span>
+            Gostou? Nos envie uma mensagem para saber mais.</p>
           <img src="/assets/img/foto4.jpeg" alt="">
-        </div>
+        </article>
         <div class="conteiner_foto">
           <h2 class="titulo_foto">Banco com floreira</h2>
           <span class="descricao_foto">Lindo banco decorado com pastilhas de vidro no assento do banco e na borda das floreiras 🥰
@@ -86,27 +89,96 @@
             Numerada e com a identificação da</span>
           <img src="/assets/img/foto2.jpeg" alt="">
         </div>
-      </figure>
-    </div>
+      </div>
+    </section>
   <hr>
   <article class="sobre">
     <figure id="img_sobre">
       <img src="./assets/img/foto_paulo.jpg" alt="Paulo Menezes">
     </figure>
     <div id="descricao">
-      <p>
+        <p>
         Paulo Montanha Menezes tem 68 anos de idade, nascido em Alegrete - RS. Em (ano de mudança), quando tinha apenas (idade), 
         se mudou para Porto Alegre - RS com o objetivo de estudar e trabalhar. Desde muito novo já se entendia com a
         marcenaria e resolveu se dedicar ao ramo. Em (ano que conheceu Sirlei), conheceu Sirlei e, hoje em dia, estão
-        há (tempo de casados) casados e são pais de 4 filhos. <br>
-        Em 2020, Sirlei e Paulo decidiram embarcaram em uma nova jornada e fundaram a Montanha Marcenaria. Lá cada um
+        há (tempo de casados) casados e são pais de 4 filhos. </p>
+        <p>Em 2020, Sirlei e Paulo decidiram embarcaram em uma nova jornada e fundaram a Montanha Marcenaria. Lá cada um
         dos dois tem uma tarefa, ele escolhe as madeiras, trata elas e monta os móveis, ela cuida da pintura e 
-        acabamento dos móveis. <br>
+        acabamento dos móveis.</p>
+        <p>
         Hoje em dia, a página Montanha Marcenaria conta com mais de 800 curtidas e mais de 10 tipos de móveis, objetos
         decorativos e utensílios.
-      </p>
+        </p>
     </div>
   </article>
+  <hr>
+  <section class="container-contato">
+    <div class="contato">
+      <form action="" method="get">
+        <label for="name">Digite seu nome:</label>
+        <input type="text" name="nome" id="name" placeholder="Digite seu nome">
+        <label for="name">Digite seu seu e-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+        <label for="assunto">Assunto:</label>
+        <select name="assunto" id="assunto">
+          <option selected disabled value="">Selecione</option>
+          <option value="orcamento">Orçamento</option>
+          <option value="duvidas">Dúvida</option>
+          <option value="elogio">Elogio</option>
+          <option value="outro">Outros</option>
+        </select>
+        <label for="mensagem">Digite sua mensagem:</label>
+        <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem" cols="30" rows="10"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="contato2">
+        <h2>Telefones</h2>
+        <div class="numeros-contatos">
+          <span class="nome-contato">Paulo</span>
+          <span class="numero">51 99594-2738</span>
+          <span class="nome-contato">Sirlei</span>
+          <span class="numero">51 99609-3160</span>
+        </div>
+        <span>OU</span>
+        <span>Nos chame no</span>
+        <i class="fab fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=5551995942738&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20site%20Montanha%20Marcenaria."></a></i></a>
+      </div>
+    </div>
+    
+  </section>
+
+  <footer class="rodape-container">
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.99671425785!2d-51.05956668432171!3d-30.094280440558077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95199ed43abb7cb3%3A0x4ec2bb1ca7c6bfed!2sR.%20Santa%20Marta%2C%20138%20-%20Jardim%20Krahe%2C%20Viam%C3%A3o%20-%20RS%2C%2094440-450!5e0!3m2!1sen!2sbr!4v1634981318293!5m2!1sen!2sbr" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="horario">
+      <h2>Horário de Funcionamento</h2>
+      <span class="dias">SEG</span><span>9h-18h</span>
+      <span class="dias">TER</span><span>9h-18h</span>
+      <span class="dias">QUA</span><span>9h-18h</span>
+      <span class="dias">QUI</span><span>9h-18h</span>
+      <span class="dias">SEX</span><span>9h-18h</span>
+      <span class="dias">SAB</span><span>fechado</span>
+      <span class="dias">DOM</span><span>fechado</span>
+    </div>
+    <div class="outras-infos">
+      <!-- ALTERAR A DIV 'REDES SOCIAIS' PARA NAV -->
+      <div class="redes-sociais">
+        <h2>Redes Sociais</h2>
+        <nav>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-whatsapp"></i></a>
+        </nav>
+      </div>
+      <div class="formas-pagamento">
+        <h2>Formas de Pagamento</h2>
+        <i class="fas fa-money-bill"></i>
+        <i class="iconify" data-icon="ic:baseline-pix"></i>
+        <i class="iconify" data-icon="simple-icons:picpay"></i>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
