@@ -3,13 +3,13 @@ function leiaMais(){
   var titulo = document.getElementsByClassName("titulo_foto");
   var maisTexto = document.getElementsByClassName("descricao_foto");
 
-  if(titulo.style.display =="none"){
-    titulo.sytle.display = "inline";
+  if(titulo.style.display == "none"){
+    titulo.sytle.display = "flex";
     maisTexto.style.display = "none";
     btnLeiaMais.innerHTML = "Leia Mais";
   }else{
     titulo.sytle.display = "none";
-    maisTexto.style.display = "inline";
+    maisTexto.style.display = "flex";
     btnLeiaMais.innerHTML = "Leia Menos";
   }
 }
