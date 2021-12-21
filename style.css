@@ -165,7 +165,7 @@ html {
   transform: translate(-50%,-50%);
 }
 
-.conteiner_foto{
+.container_foto{
   position: relative;
   width: 100%;
 }
@@ -191,15 +191,16 @@ hr{
   height: 100%;
 }
 
-.conteiner_foto:hover .descricao_foto{
+.container_foto:hover .descricao_foto{
   display: flex;
 }
 
-.conteiner_foto:hover .titulo_foto{
+
+.container_foto:hover .titulo_foto{
   display: flex;
 }
 
-.conteiner_foto:hover img{
+.container_foto:hover img{
   opacity: 0.3;
 }
 
@@ -373,6 +374,7 @@ hr{
   align-self: center;
   text-align: center;
   gap: 25px;
+  justify-content: center;
   border-left: #FFF solid 1px;
   padding-bottom: 22px;
 }
@@ -403,7 +405,6 @@ hr{
 
 .contato2 .fa-whatsapp{
   margin: auto;
-  width: 6%;
   color: #40E65E;
   font-size: 3em;
   cursor: pointer;
@@ -440,6 +441,8 @@ hr{
 
 .horario .dias{
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
 }
 
 .redes-sociais a{
@@ -452,6 +455,10 @@ hr{
   font-size: 28px;
   padding: 10px;
   color: #FFF;
+}
+
+.icon-din{
+  display: inline;
 }
 
 .outras-infos{
@@ -476,18 +483,11 @@ hr{
 }
 
 
-@media only screen and (max-width: /*930*/850px) {
+@media only screen and (max-width: 850px) {
   .contato{
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-  }
-
-  .morecontent span {
-    display: none;
-  }
-  .morelink {
-    display: block;
   }
 
   .contato2{
@@ -512,10 +512,10 @@ hr{
   .btnLeiaMais{
     display: flex;
     position: absolute;
-    z-index: 9999;
+    z-index: 999;
   }
 
-  .btnLeiaMais:hover .titulo_foto{
+  .titulo_foto{
     display: none;
     position: absolute;
     text-align: center;
@@ -534,22 +534,18 @@ hr{
     color: #333333;
     font-size: 1.3em;
     z-index: 9999;
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%,-50%);
   }
-  
-  /* .conteiner_foto:hover img{
-    opacity: 100%;
-  } */
 
   .btnLeiaMais:hover .descricao_foto{
     display: flex;
-  }
+  } 
   
   .btnLeiaMais:hover .titulo_foto{
     display: flex;
-  }
+  } 
 
   .btnLeiaMais:hover img{
     opacity: 0.3;
@@ -582,7 +578,7 @@ hr{
     overflow:hidden;
   }
 
-  .conteiner_foto{
+  .container_foto{
     width: 90%;
     height: 390px;
     margin: 0 auto;
@@ -667,6 +663,32 @@ hr{
   #nav.active #hamburguer::after{
     transform: rotate(-135deg);
     top: -7px;
+  }
+}
+
+@media(max-width:310px){
+  .titulo_foto{
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: #152427;
+    z-index: 9999;
+    font-size: 1.9em;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .descricao_foto{
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: #333333;
+    font-size: 1.2em;
+    z-index: 9999;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 }
 
